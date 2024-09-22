@@ -30,6 +30,12 @@ namespace Ex11e12_CrudComAutenticacao_AT.Controllers
             return View();
         }
 
+        [Authorize(Roles = "admin")]
+        public IActionResult MensagemParaAdm()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
