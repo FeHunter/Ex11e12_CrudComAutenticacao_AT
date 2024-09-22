@@ -1,4 +1,5 @@
 using Ex11e12_CrudComAutenticacao_AT.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -19,6 +20,12 @@ namespace Ex11e12_CrudComAutenticacao_AT.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult MostraMensagem ()
         {
             return View();
         }
