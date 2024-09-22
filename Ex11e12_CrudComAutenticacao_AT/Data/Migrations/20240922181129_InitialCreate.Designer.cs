@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ex11e12_CrudComAutenticacao_AT.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240922180344_InitialCreate")]
+    [Migration("20240922181129_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
