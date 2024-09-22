@@ -22,6 +22,15 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.SlidingExpiration = true;
 });
 
+builder.Services.Configure<IdentityOptions>(optins =>
+{
+    optins.Password.RequiredLength = 10;
+    optins.Password.RequiredUniqueChars = 3;
+    optins.Password.RequireNonAlphanumeric = false;
+    optins.Password.RequireUppercase = true;
+    optins.Password.RequireLowercase = true;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
